@@ -1,4 +1,4 @@
-package homeworkfive;
+package partone.homeworkfive;
 
 public class Person {
     private String fio;

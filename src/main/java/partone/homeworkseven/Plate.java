@@ -1,4 +1,4 @@
-package homeworkseven;
+package partone.homeworkseven;
 
 public class Plate {
 

@@ -1,4 +1,4 @@
-package homeworkone;
+package partone.homeworkone;
 
 import java.util.Scanner;
 

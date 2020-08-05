@@ -1,4 +1,4 @@
-package homeworksix;
+package partone.homeworksix;
 
 public class Cat extends Animal {
 

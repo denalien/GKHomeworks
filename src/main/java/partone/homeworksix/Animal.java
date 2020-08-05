@@ -1,51 +1,47 @@
-package homeworksix;
+package partone.homeworksix;
 
-public class Dog extends Animal {
+public abstract class Animal {
 
-    int canRun = 500;
-    int canSwim = 10;
-    int canJump = 1;
+    int canRun;
+    int canSwim;
+    int canJump;
 
-    public Dog(int canRun, int canSwim, int canJump) {
+    public Animal(int canRun, int canSwim, int canJump) {
         this.canRun = canRun;
         this.canSwim = canSwim;
         this.canJump = canJump;
     }
 
-    public Dog() {
-
+    public Animal() {
     }
 
-    @Override
     boolean run(int length) {
-        if(length > this.canRun){
+        if(length > canRun){
             System.out.println("Can't do this!");
             return false;
         } else {
-            System.out.println("Dog is running");
+            System.out.println("Animal is running");
             return true;
         }
-    }
 
-    @Override
+    }
     boolean swim(int lenght) {
-        if(lenght > this.canSwim){
+        if(lenght > canSwim){
             System.out.println("Can't do this!");
             return false;
         } else {
-            System.out.println("Dog is swimming");
+            System.out.println("Animal is swimming");
+            return true;
+        }
+    }
+    boolean jump(int height) {
+        if(height > canJump){
+            System.out.println("Can't do this!");
+            return false;
+        } else {
+            System.out.println("Animal is jumping");
             return true;
         }
     }
 
-    @Override
-    boolean jump(int height) {
-        if(height > this.canJump){
-            System.out.println("Can't do this!");
-            return false;
-        } else {
-            System.out.println("Dog is jumping");
-            return true;
-        }
-    }
 }
