@@ -26,8 +26,10 @@ public class ShowTime {
     private static void rsgo(Contestants contestant, Obstacle... obstacles){
         boolean haveCrossed = true;
         for (Obstacle o: obstacles
-             ) {
-            haveCrossed = haveCrossed && o.doCross(contestant);
+        ) {
+            if (haveCrossed){
+                haveCrossed = haveCrossed && o.doCross(contestant);
+            }
         }
         if (haveCrossed){
             System.out.println("Участник " + contestant.getName() + " прошел полосу препятствий");
