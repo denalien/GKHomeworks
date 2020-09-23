@@ -1,13 +1,14 @@
 package parttwo.homeworkone;
 
-public class Wall extends Obstacle {
+public class Wall implements Obstacle{
+    private int height;
 
-    public Wall(int heigth) {
-        super(heigth);
+    public Wall(int height) {
+        this.height = height;
     }
 
     @Override
-    public String toString() {
-        return "Wall";
+    public boolean doCross(Contestants contestants) {
+        return contestants.canJump() >= height;
     }
 }
