@@ -1,12 +1,5 @@
 package parttwo.homeworkone;
 
-public abstract class Obstacle {
-    int obstacleLevel;
-
-    public Obstacle(int obstacleLevel) {
-        this.obstacleLevel = obstacleLevel;
-    }
-
-    @Override
-    public abstract String toString();
+public interface Obstacle {
+    public boolean doCross(Contestants contestants);
 }
