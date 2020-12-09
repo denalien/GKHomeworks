@@ -1,38 +1,28 @@
 package parttwo.homeworkone;
 
-public class Cat implements Crossable{
-    int runStamina;
-    int jumpStamina;
+public class Cat implements Contestants{
+    private String name;
+    private int runLength;
+    private int jumpHeight;
 
-    public Cat (int runStamina, int jumpStamina) {
-        this.runStamina = runStamina;
-        this.jumpStamina = jumpStamina;
+    public Cat(String name, int runLength, int jumpHeight) {
+        this.name = name;
+        this.runLength = runLength;
+        this.jumpHeight = jumpHeight;
     }
 
     @Override
-    public boolean run(Obstacle runPath) {
-        if (runPath.obstacleLevel > runStamina){
-            System.out.println("Препятствие " + runPath.toString() + " длиной " + runPath.obstacleLevel + " непреодолимо");
-            return false;
-        } else {
-            System.out.println("Препятствие " + runPath.toString() + " пройдено");
-            return true;
-        }
+    public int canRun() {
+        return runLength;
     }
 
     @Override
-    public boolean jump(Obstacle wall) {
-        if (wall.obstacleLevel > jumpStamina){
-            System.out.println("Препятствие " + wall.toString() + " высотой " + wall.obstacleLevel + " непреодолимо");
-            return false;
-        } else {
-            System.out.println("Препятствие " + wall.toString() + " пройдено");
-            return true;
-        }
+    public int canJump() {
+        return jumpHeight;
     }
 
     @Override
-    public String toString() {
-        return "Cat";
+    public String getName() {
+        return name;
     }
 }
